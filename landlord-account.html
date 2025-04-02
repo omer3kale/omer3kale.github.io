@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Landlord Account</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('./img/koeln4.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      color: white;
+    }
+    header {
+      width: 100%;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: left;
+    }
+    header a {
+      color: #18bc9c;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .form-container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 400px;
+      margin-top: auto;
+      margin-bottom: auto;
+      text-align: center;
+    }
+    .form-container h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .form-container label {
+      display: block;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #18bc9c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .form-container button:hover {
+      background-color: #128f76;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">&larr; Back to Homepage</a>
+  </header>
+
+  <div class="form-container">
+    <h1>Create Account</h1>
+    <form action="/create-landlord-account" method="POST" onsubmit="return validateAccountForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="surname">Surname:</label>
+      <input type="text" id="surname" name="surname" required>
+
+      <label for="email">

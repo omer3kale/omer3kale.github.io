@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="img/favicon.ico">
+    <title>APARTMENT SEARCH PLATFORM</title>
+    <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&display=fallback">
+    <style>
+      :root {
+        --md-text-font: "Roboto";
+        --md-code-font: "Roboto Mono";
+      }
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      header {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+      }
+      .menu-toggle {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      header nav {
+        display: flex;
+        gap: 15px;
+      }
+      header nav a {
+        color: #18bc9c;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      header nav a:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+        header nav {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          margin-top: 10px;
+        }
+        header.nav-open nav {
+          display: flex;
+        }
+      }
+      .landing-section {
+        position: relative;
+        height: 400px;
+        background: url('./img/koeln.jpg') no-repeat center center/cover;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .landing-section h1 {
+        font-size: 3rem;
+        background: rgba(0,0,0,0.6);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .content-section {
+        padding: 20px;
+      }
+      .card-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .card {
+        background: linear-gradient(145deg, #ffffff, #f0f0f0);
+        border-radius: 12px;
+        padding: 25px;
+        width: 260px;
+        text-align: center;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+      .card h3 {
+        margin-top: 0;
+        color: #333;
+      }
+      .card p {
+        color: #666;
+      }
+      .card a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 18px;
+        background: #18bc9c;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .card a:hover {
+        background: #128f76;
+      }
+      footer {
+        background: #222;
+        color: #ccc;
+        padding: 20px;
+        font-size: 14px;
+      }
+      footer ul {
+        list-style: none;
+        padding: 0;
+      }
+      footer li {
+        margin-bottom: 5px;
+      }
+      footer a {
+        color: #18bc9c;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="site-header">
+      <div><strong>🏢 Apartment Platform</strong></div>
+      <div class="menu-toggle" onclick="document.getElementById('site-header').classList.toggle('nav-open')">☰</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Landlord Login</a>
+        <a href="renter-login.html">Renter Login</a>
+        <a href="offers.html">Apartment Offers</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="landing-section">
+        <h1>Welcome to APARTMENT SEARCH PLATFORM</h1>
+      </section>
+
+      <section class="content-section" id="offers">
+        <h2>Our Services</h2>
+        <p>The following content is created by Zétény Dobos and Ömer Üçkale. Contact the respected addresses to get in touch with us.</p>
+
+        <div class="card-list">
+          <div class="card">
+            <h3>Landlord Login</h3>
+            <p>Log in to rent your apartment ASAP!</p>
+            <a href="login.html">Login</a>
+          </div>
+          <div class="card">
+            <h3>Renter Login</h3>
+            <p>Log in to rent your apartment ASAP!</p>
+            <a href="renter-login.html">Login</a>
+          </div>
+          <div class="card">
+            <h3>Create Landlord Account</h3>
+            <p>Register as a landlord to start listing!</p>
+            <a href="landlord-account.html">Create</a>
+          </div>
+          <div class="card">
+            <h3>Create Renter Account</h3>
+            <p>Register as a renter to find your next home!</p>
+            <a href="renter-account.html">Create</a>
+          </div>
+          <div class="card">
+            <h3>Apartment Offers</h3>
+            <p>Submit your apartment listing with photos and info!</p>
+            <a href="apartment-offers.html">Submit Offer</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <h2 id="further-information">Further Information</h2>
+        <ul>
+          <li><strong>SEE ALSO</strong></li>
+          <li><a href="https://www.linkedin.com/in/z%C3%A9t%C3%A9ny-dobos/?originalSubdomain=hu">Co-Founder</a> - Zétény Dobos</li>
+          <li><a href="https://www.linkedin.com/in/%C3%B6mer-%C3%BC%C3%A7kale-482787202/">Tech Co-Founder</a> - Ömer Üçkale</li>
+          <li><a href="https://monticore.github.io/monticore/docs/GettingStarted/">Getting Started</a> - How to start using MontiCore</li>
+          <li><a href="../../00.org/Explanations/CHANGELOG/">Changelog</a> - Release Notes</li>
+          <li><a href="../../00.org/Explanations/FAQ/">FAQ</a> - FAQ</li>
+        </ul>
+        <div cl
